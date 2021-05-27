@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YTS MOVIE API</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="movie-container">
+
+    <h1 class="page-title">Download Movies</h1>
+
+    <div class="controllers">
+
+      <div class="btn-controller">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+        <h1 id="searchHeading"></h1>
+      </div>
+
+      <div class="search-controller">
+        <form id="search">
+          <input type="text" placeholder="Search movie..." id="query" autocomplete="off">
+          <input type="submit" value="search">
+        </form>
+      </div>
+
+    </div>
+
+
+    <h1 id="pagination">Page: <span id="page"></span>/<span id="total"></span></h1>
+    <div id="results"></div>
+
+    <div class="Overlay">
+      <div class="close" id="closeOverlay">&times;</div>
+      <div class="info"></div>
+    </div>
+
+    <div id="errors"></div>
+
+
+  </div>
+
+  <script src="movies.js"></script>
+</body>
+
+</html>
