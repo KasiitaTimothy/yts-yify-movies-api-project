@@ -59,11 +59,6 @@ searchForm.addEventListener('submit', (e) => {
   const pagination = document.querySelector('#pagination');
 
   const searchHeading = document.querySelector('#searchHeading');
-
-  pagination.style.display = "none";
-  prevBtn.style.display = "none";
-  nextBtn.style.display = "none";
-
   const movieTerm = searchQuery.value;
 
   if (movieTerm !== "") {
@@ -72,7 +67,18 @@ searchForm.addEventListener('submit', (e) => {
     searchHeading.style.display = "block";
     searchHeading.innerHTML = `Searching For: <span>${movieTerm}</span>`;
 
+  } else {
+    alert('Enter any keyword..');
+    return false;
   }
+
+  pagination.style.display = "none";
+  prevBtn.style.display = "none";
+  nextBtn.style.display = "none";
+
+
+
+
 
 
 });
